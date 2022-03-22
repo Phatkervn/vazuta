@@ -1,0 +1,27 @@
+
+{% extends "home/base.html" %}
+
+{% block content %}
+    </ul>
+
+    {% if latest_question_list %}
+    
+    {% for question in latest_question_list %}
+        <div class="card">
+        <img src="Viktor.jpeg" alt="{{ question.title }}" style="width:100% ;height:200px">
+        <h1>{{ question.title }}</h1>
+        <p class="price">v1.0.0</p>
+        <p>This..</p>
+        <p><button onclick="location.href ='/{{ question.id}}/'">Xem thêm</a></button></p>
+    </div>
+  
+    {% endfor %}
+    
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+{% endblock %}
+
+
+
